@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #485969 0%, #232e39 100% );
+    color: #c7d1d7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+} 
+
+/* Header */
+header {
+    background:linear-gradient(135deg, #090e13 0%, #20262d 50%, #090e13 100%);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+nav a {
+    color: #f5f1e8;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #323e51;
+}
+
+.pashalka{
+    color:#c7d1d7;
+}
+
+/* ГЛАВНАЯ */
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    width: 100%;
+}
+
+/* ПЕРВАЯ СТРАНИЦА - ОСНОВНОЕ */
+.hero {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.book-cover {
+    aspect-ratio: 2 / 3;
+    background-image: url(/static/img/sixcrow.jpg);
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.book-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #c7d1d7;
+}
+
+.author {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #c7d1d7;
+}
+
+.meta {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta li {
+    background: #20262d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.meta li span {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.description {
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    color: #c7d1d7;
+}
+
+/* ПЕРВАЯ СТРАНИЦА - ПЕРСОНАЖИ */
+.characters {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    margin-top: 5rem;
+}
+
+.characters h1 {
+    background: #20262d;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 2.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 20rem;
+    margin-bottom: 30px;
+    margin-right: 23.75rem;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* КНОПОЧКИ */
+.btn {
+    display: inline-block;
+    background: #8b0000;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #a50000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.4);
+}
+
+/* ПОКУПКА */
+.buy-section {
+    text-align: center;
+}
+
+.buy-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+
+/* ПОДВАЛ */
+footer {
+    background:linear-gradient(135deg, #090e13 0%, #20262d 50%, #090e13 100%);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .book-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .quotes-section h1 {
+        font-size: 1.8rem;
+    }
+}

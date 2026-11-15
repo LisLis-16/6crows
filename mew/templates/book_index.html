@@ -1,0 +1,35 @@
+{% extends "book_base.html" %}
+
+{% block title %}{{ book.title }} — Главная{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="book-cover"></div>
+    <div class="book-info">
+        <h1>{{ book.title }}</h1>
+        <p class="author">Автор: <strong>{{ book.author }}</strong></p>
+
+        <ul class="meta">
+            <li><span>Год:</span> {{ book.year }}</li>
+            <li><span>Жанр:</span> {{ book.genre }}</li>
+            <li><span>Страниц:</span> {{ book.pages }}</li>
+        </ul>
+        <p class="description">{{ book.description }}</p>
+
+        <a href="{{ url_for('about') }}" class="btn">Купить</a>
+    </div>
+</section>
+<div class="characters">
+    <h1>ПЕРСОНАЖИ</h1><br>
+    <div class="card">
+        {%for char in book.chars %}
+            <u><h2>{{char.name}}</h2></u>
+            <br>
+            <p>{{char.info}}</p>
+            <br>
+        {%endfor%}
+
+    </div>
+</div>
+
+{% endblock %}

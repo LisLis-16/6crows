@@ -1,0 +1,12 @@
+{% extends "book_base.html" %}
+
+{% block title %}Купить книжечку{% endblock %}
+
+{% block content %}
+<section class="buy-section">
+    <h1>Это все скам, ребят. Не открывайте скам ссылки</h1>
+    <p class="subtitle">Но можете кинуть денежку мне</p>
+
+    <a href="{{ url_for('index') }}" class="btn">← На главную</a>
+</section>
+{% endblock %}
